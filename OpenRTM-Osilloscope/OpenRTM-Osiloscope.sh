@@ -9,4 +9,4 @@ if test "x$RTM_JAVA_ROOT" = "x" ; then
 fi
 export CLASSPATH=.:${RTM_JAVA_ROOT}/jar/OpenRTM-aist-1.0.0.jar:${RTM_JAVA_ROOT}/jar/commons-cli-1.1.jar
 cd `dirname $0`/bin
-java OsiloscopeComp -f rtc.conf $*
+java OsiloscopeComp -f ../rtc.conf $*

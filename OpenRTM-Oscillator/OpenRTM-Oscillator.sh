@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export RTM_JAVA_ROOT=/home/kunio/Downloads/OpenRTM-aist/1.0
+export RTM_JAVA_ROOT=${HOME}/ros/${ROS_DISTRO}/src/OpenRTM-Oscilloscope/OpenRTM-aist/1.0
 if test "x$RTM_JAVA_ROOT" = "x" ; then
     echo "Environment variable RTM_JAVA_ROOT is not set."
     echo "Please specify the OpenRTM-aist installation directory."
@@ -9,4 +9,4 @@ if test "x$RTM_JAVA_ROOT" = "x" ; then
 fi
 export CLASSPATH=.:${RTM_JAVA_ROOT}/jar/OpenRTM-aist-1.0.0.jar:${RTM_JAVA_ROOT}/jar/commons-cli-1.1.jar
 cd `dirname $0`/bin
-java OscillatorComp -f rtc.conf $*
+java OscillatorComp -f ../rtc.conf $*
